@@ -4,11 +4,11 @@ type Config = {
 };
 
 export abstract class Base {
-  private apiKey: string;
+  //private apiKey: string;
   private baseUrl: string;
 
   constructor(config: Config) {
-    this.apiKey = config.apiKey;
+    //this.apiKey = config.apiKey;
     this.baseUrl = config.baseUrl || "";
   }
 
@@ -16,7 +16,7 @@ export abstract class Base {
     const url = this.baseUrl + endpoint;
     const headers = {
       "Content-Type": "application/json",
-      "api-key": this.apiKey,
+      //"api-key": this.apiKey,
     };
     const config = {
       ...options,
