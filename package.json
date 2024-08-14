@@ -12,7 +12,13 @@
   "keywords": [],
   "author": "mbeka02",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^4.0.2"
   }
 }
