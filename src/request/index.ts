@@ -1,9 +1,9 @@
-import { Base } from "src/base";
+import { Base } from "../base";
 import { CreateRequestParams } from "./types";
-const resource = "";
+const resourceName = "request";
 export class Request extends Base {
   createRequest(args: CreateRequestParams): Promise<string> {
-    return this.invoke(`${resource}/`, {
+    return this.invoke(`/${resourceName}/create`, {
       method: "POST",
       body: JSON.stringify(args),
     });

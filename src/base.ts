@@ -2,18 +2,20 @@
 import fetch from "isomorphic-unfetch";
 
 type Config = {
-  baseUrl: string;
+  baseUrl?: string;
 };
 
 export abstract class Base {
   private baseUrl: string;
 
   constructor(config: Config) {
-    this.baseUrl = config.baseUrl;
+    this.baseUrl =
+      config.baseUrl || "https://nine-ad9w.onrender.com";
   }
   //change to async
   protected invoke<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    const url = this.baseUrl + endpoint;
+    const url = `${this.baseUrl}${endpoint}`;
+    console.log(url);
     const headers = {
       "Content-Type": "application/json",
     };
