@@ -12,9 +12,11 @@ export abstract class Base {
     this.baseUrl = config.baseUrl || "https://nine-ad9w.onrender.com";
   }
   //change to async
-  protected invoke<T>(endpoint: string, options?: RequestInit): Promise<T> {
+  protected async invoke<T>(
+    endpoint: string,
+    options?: RequestInit,
+  ): Promise<T> {
     const url = `${this.baseUrl}${endpoint}`;
-    console.log("url=>", url);
     const headers = {
       "Content-Type": "application/json",
     };
@@ -22,12 +24,17 @@ export abstract class Base {
       ...options,
       headers,
     };
-    return fetch(url, config).then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error(response.statusText);
+    try {
+      const response = await fetch(url, config);
+      if (!response.ok) {
+        const errorBody = await response.json();
+        throw new Error(
+          `HTTP error! status:${response.statusText} body:${errorBody}`,
+        );
       }
-    });
+      return response.json();
+    } catch (error) {
+      throw error;
+    }
   }
 }
