@@ -1,6 +1,3 @@
-//Switches between unfetch & node-fetch for client & server.
-import fetch from "isomorphic-unfetch";
-
 type Config = {
   baseUrl?: string;
 };

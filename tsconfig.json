@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ESNext",
     "declaration": true,
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2021",
+    "target": "ESNext",
     "sourceMap": false,
     "outDir": "./dist",
     "baseUrl": "./",
