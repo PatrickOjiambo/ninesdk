@@ -1,6 +1,6 @@
 {
   "name": "nine-sdk",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "type": "module",
   "description": "Nine SDK for Javascript",
   "main": "./dist/index.cjs",

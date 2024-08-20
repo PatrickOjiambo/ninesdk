@@ -21,3 +21,7 @@ export declare type CreateRequestParams = {
   // The identity that signs the request, either payee or payer identity.
   signerAddress: string;
 };
+
+export declare type CreateRequestResponse = {
+  requestID: string;
+};
