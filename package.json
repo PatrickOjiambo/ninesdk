@@ -1,5 +1,5 @@
 {
-  "name": "nine-sdk",
+  "name": "nineprotocol-sdk",
   "version": "1.0.8",
   "type": "module",
   "description": "Nine SDK for Javascript",
