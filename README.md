@@ -41,4 +41,4 @@ console.log(value);
 
 ## Authors
 
-- [@mbeka02](https://www.github.com/mbeka02)
+- [@mbeka02](https://www.github.com/PatrickOjiambo)
